@@ -1,0 +1,79 @@
+h3 {
+  color: #3f51b5;
+  font-weight: 100;
+}
+
+mat-icon {
+  font-family: 'Material Icons';
+  font-size: 18px;
+}
+
+.board-page {
+  background: white;
+  width: 860px;
+  padding: 15px 25px;
+  height: calc(100vh - 64px);
+  box-shadow:
+  0 10px 20px rgba(0,0,0,0.19),
+  0 6px 6px rgba(0,0,0,0.23);
+  overflow-y: scroll;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row-margin {
+  margin: 10px 0;
+}
+
+.row.vertical-center {
+    align-items: center;
+}
+
+.row.horizontal-center {
+    justify-content: center;
+}
+
+.row.left {
+  justify-content: left;
+}
+
+.row.column {
+  flex-direction: column;
+}
+
+.margin-right {
+  margin-right: 15px;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.example-width-1-2 {
+  width: 50%;
+}
+
+.example-width-1-3 {
+  width: 33.33%;
+}
+
+.mat-raised-button {
+  text-align: center;
+}
+
+.example-radio-group {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.example-selected-value {
+  margin: 15px 0;
+}
+

@@ -1,0 +1,13 @@
+<mat-form-field class="hint-input">
+    <input
+        name="postalCode"
+        matInput
+        #model="ngModel"
+        #postalCode
+        maxlength="5"
+        placeholder="Postal Code"
+        value="94043"
+        [(ngModel)]="code"
+    >
+    <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+</mat-form-field>

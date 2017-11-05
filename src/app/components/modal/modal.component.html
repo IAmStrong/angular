@@ -1,0 +1,58 @@
+<h2 mat-dialog-title>Your submission</h2>
+<mat-dialog-content>
+    <h3>COLLECTED DATA</h3>
+    <mat-chip-list class="chip-list">
+        <mat-chip>First Name</mat-chip>
+        <mat-chip color="primary" selected="true">{{ data.firstName || '-' }}</mat-chip>
+    </mat-chip-list>
+    <hr>
+    <mat-chip-list class="chip-list">
+        <mat-chip>Last Name</mat-chip>
+        <mat-chip color="primary" selected="true">{{ data.lastName || '-' }}</mat-chip>
+    </mat-chip-list>
+    <hr>
+    <mat-chip-list class="chip-list">
+        <mat-chip>Address</mat-chip>
+        <mat-chip color="primary" selected="true">{{ data.address || '-' }}</mat-chip>
+    </mat-chip-list>
+    <hr>
+    <mat-chip-list class="chip-list">
+        <mat-chip>City</mat-chip>
+        <mat-chip color="primary" selected="true">{{ data.city || '-' }}</mat-chip>
+    </mat-chip-list>
+    <hr>
+    <mat-chip-list class="chip-list">
+        <mat-chip>State</mat-chip>
+        <mat-chip color="primary" selected="true">{{ data.state || '-' }}</mat-chip>
+    </mat-chip-list>
+    <hr>
+    <mat-chip-list class="chip-list">
+        <mat-chip>Postal Code</mat-chip>
+        <mat-chip color="primary" selected="true">{{ data.postalCode || '-' }}</mat-chip>
+    </mat-chip-list>
+    <hr>
+    <mat-chip-list class="chip-list">
+        <mat-chip>Telephone</mat-chip>
+        <mat-chip color="primary" selected="true">{{ data.tel || '-' }}</mat-chip>
+    </mat-chip-list>
+    <hr>
+    <mat-chip-list class="chip-list">
+        <mat-chip>Message</mat-chip>
+        <mat-chip color="primary" selected="true">{{ data.message || '-' }}</mat-chip>
+    </mat-chip-list>
+    <hr>
+    <mat-chip-list class="chip-list">
+        <mat-chip>Slide Toggle</mat-chip>
+        <mat-chip color="primary" selected="true">{{ data.slideToggle ? 'on' : 'off' }}</mat-chip>
+    </mat-chip-list>
+    <hr>
+    <mat-chip-list class="chip-list">
+        <mat-chip>Slider Value</mat-chip>
+        <mat-chip color="primary" selected="true">{{ data.slider || 0 }}</mat-chip>
+    </mat-chip-list>
+    <hr>
+    <mat-chip-list class="chip-list">
+        <mat-chip>Favorite Season</mat-chip>
+        <mat-chip color="primary" selected="true">{{ data.radio_buttons || 'Unknown' }}</mat-chip>
+    </mat-chip-list>
+</mat-dialog-content>

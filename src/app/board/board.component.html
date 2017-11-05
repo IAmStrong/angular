@@ -1,0 +1,118 @@
+<div class="board-page">
+    <h3>Example Form</h3>
+    <form class="example-form" #boardForm="ngForm" (ngSubmit)="onSubmit(boardForm)">
+        <div class="row">
+            <app-simple-input
+                class="example-width-1-3 margin-right"
+                [name]="'firstName'"
+                [required]="true"
+                [parentForm]="boardForm"
+                [placeholder]="'First Name'"
+            >
+            </app-simple-input>
+            <app-simple-input
+                class="example-width-1-3 margin-right"
+                [name]="'lastName'"
+                [required]="false"
+                [parentForm]="boardForm"
+                [placeholder]="'Last Name'"
+            >
+            </app-simple-input>
+            <mat-form-field class="example-width-1-3">
+                <input
+                    matInput placeholder="Email"
+                    [formControl]="emailFormControl"
+                >
+                <mat-error *ngIf="emailFormControl.hasError('pattern')">
+                    Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                    Email is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <!-- <app-email-input
+                class="example-width-1-3"
+                [parentForm]="boardForm"
+            >
+            </app-email-input> -->
+        </div>
+        <div class="row">
+            <app-textarea
+                class="example-full-width"
+                [parentForm]="boardForm"
+                [text]="'1600 Amphitheatre Pkwy'"
+            >
+            </app-textarea>
+        </div>
+        <div class="row">
+            <app-simple-input
+                class="example-width-1-3 margin-right"
+                [name]="'city'"
+                [required]="false"
+                [parentForm]="boardForm"
+                [placeholder]="'City'"
+            >
+            </app-simple-input>
+            <app-simple-input
+                class="example-width-1-3 margin-right"
+                [name]="'state'"
+                [required]="false"
+                [parentForm]="boardForm"
+                [placeholder]="'State'"
+            >
+            </app-simple-input>
+            <app-hint-input
+                class="example-width-1-3"
+                [parentForm]="boardForm"
+                [code]='94043'
+            >
+            </app-hint-input>
+        </div>
+        <div class="row">
+            <mat-form-field class="example-width-1-2 margin-right">
+                <span matPrefix>+1 &nbsp;</span>
+                <input type="tel" name="tel" [(ngModel)]="telValue" matInput placeholder="Telephone">
+                <mat-icon matSuffix>mode_edit</mat-icon>
+            </mat-form-field>
+            <mat-form-field class="example-width-1-2">
+                <input matInput #message maxlength="256" name="message" [(ngModel)]="messageValue"  placeholder="Message">
+                <mat-hint align="start"><strong>Don't disclose personal info</strong> </mat-hint>
+                <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+            </mat-form-field>
+        </div>
+      <div class="row">
+        <mat-form-field>
+          <mat-select placeholder="Favorite food" [(ngModel)]="selectedValue" name="food">
+            <mat-option *ngFor="let food of foods" [value]="food.value">
+              {{food.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="row left">
+          <mat-checkbox class="margin-right" name="checkMeOne">Check me 1!</mat-checkbox>
+          <mat-checkbox checked="true" class="margin-right" name="checkMeTwo">Check me 2!</mat-checkbox>
+          <mat-slide-toggle name="slideToggle" [(ngModel)]="slideToggle">Slide me!</mat-slide-toggle>
+      </div>
+      <div class="row">
+        <mat-slider name="slider" [(ngModel)]="sliderValue" class="example-full-width"></mat-slider>
+      </div>
+      <div class="row column vertical-center">
+        <mat-radio-group class="example-radio-group" [(ngModel)]="favoriteSeason" name="radio_buttons">
+          <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+            {{season}}
+          </mat-radio-button>
+        </mat-radio-group>
+        <div class="example-selected-value">Your favorite season is: {{favoriteSeason || 'Unknown'}}</div>
+      </div>
+      <div class="row row-margin horizontal-center">
+        <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+        >
+            Submit
+        </button>
+      </div>
+    </form>
+</div>

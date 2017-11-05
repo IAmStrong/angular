@@ -1,0 +1,9 @@
+<mat-form-field class="simple-input">
+    <input
+        #model="ngModel"
+        name = "{{ name }}"
+        matInput placeholder="{{ placeholder }}"
+        required="{{ required }}"
+        [(ngModel)]="inputValue"
+    >
+</mat-form-field>
